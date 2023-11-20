@@ -7,8 +7,11 @@
   <%= @post.body %>
 </div>
 <%= render 'shared/comment_form', url: post_comments_path(@post) %>
-<% @post.comments.each do |comment| %>
-  <div>
-    <%= comment.body %>
-  </div>
-<% end %>
+<br>
+<div>Comments</div>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+    </li>
+  <% end %></ul>

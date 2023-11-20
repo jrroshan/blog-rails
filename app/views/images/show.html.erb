@@ -1,12 +1,16 @@
 <h1>Single Image</h1>
 
 <div>
-  <%= image_tag @image.file, class: "img-responsive" if @image.file.present?%>
+  <%= image_tag @image.file, class: "img-responsive" if @image.file.present? %>
 </div>
 
 <%= render 'shared/comment_form', url: image_comments_path(@image) %>
-<% @image.comments.each do |comment| %>
-  <div>
-    <%= comment.body %>
-  </div>
-<% end %>
+<br>
+<div>Comments:</div>
+<ul>
+  <% @image.comments.each do |comment| %>
+    <li>
+      <%= comment.body %>
+    </li>
+  <% end %>
+</ul>
