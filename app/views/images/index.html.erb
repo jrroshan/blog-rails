@@ -1,0 +1,10 @@
+<h1>Images</h1>
+<%= link_to 'Add New Image', new_image_path %>
+<% @images.each do |image| %>
+  <div>
+    <%= link_to image_path(image) do %>
+      <%= image_tag image.file, class: "img-responsive" if image.file.present?%>
+    <% end %>
+    <%= button_to 'Delete Image', image_path(image), :method => :delete %>
+  </div>
+<% end %>

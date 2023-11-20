@@ -69,3 +69,9 @@ end
 
 # Added Bootstrap
 gem 'bootstrap'
+
+# Sass Engine
+gem 'dartsass-sprockets'
+
+# For Debugging
+gem 'pry', '~> 0.14.2'

@@ -1,0 +1,14 @@
+<h1>Singe Post</h1>
+
+<div>
+  <%= @post.title %>
+</div>
+<div>
+  <%= @post.body %>
+</div>
+<%= render 'shared/comment_form', url: post_comments_path(@post) %>
+<% @post.comments.each do |comment| %>
+  <div>
+    <%= comment.body %>
+  </div>
+<% end %>
