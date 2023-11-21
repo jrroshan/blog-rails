@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to(request.referer, notice: 'Comment was successfully created.')
     else
-      render(request.referer, status: :unprocessable_entity)
+      redirect_to(request.referer, status: :unprocessable_entity)
     end
   end
 
